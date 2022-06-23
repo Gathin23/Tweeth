@@ -1,2 +1,2 @@
 # Tweeth
-##Twitter clone built on ethereum blockchain
+## Twitter clone built on ethereum blockchain
