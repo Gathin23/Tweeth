@@ -19,9 +19,9 @@ contract TweethContract {
     mapping(uint256 => address) tweetToOwner;
 
     // Function to add Tweet
-    function addTweet(string memory tweetText) external {
+    function addTweet(string memory tweetText, bool isDeleted) external {
         uint tweetId = tweets.length;
-        tweets.push(Tweet(tweetId, msg.sender, tweetText, false));
+        tweets.push(Tweet(tweetId, msg.sender, tweetText, isDeleted));
         tweetToOwner[tweetId] = msg.sender;
         emit AddTweet(msg.sender, tweetId);
     }
