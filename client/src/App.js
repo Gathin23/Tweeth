@@ -7,7 +7,7 @@ import Widgets from "./Widgets"
 
 function App() {
   const [currentAccount, setCurrentAccount] = useState("");
-  const [correctNetwork, setCorrectNetwork] = useEffect(false);
+  const [correctNetwork, setCorrectNetwork] = useState(false);
 
   const connectWallet = async () => {
     try {
@@ -46,7 +46,7 @@ function App() {
 
   return (
     <div>
-      // if currentaccount is empty then first or else if it is in correct network then show all or throw an error
+       {/* if currentaccount is empty then first or else if it is in correct network then show all or throw an error */}
       {currentAccount === '' ? (
         <button className="text-2xl font-bold py-3 px-12 bg-[#f1c232] rounded-lg mb-10 hover:scale-105 transition duration-500 ease-in-out" 
         onClick={connectWallet}>Connect Wallet</button>
